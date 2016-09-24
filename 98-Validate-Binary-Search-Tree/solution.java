@@ -31,11 +31,6 @@ public class Solution {
             return new Rst(true, Integer.MIN_VALUE, Integer.MAX_VALUE);
         }
         
-        // if (!isValidBST(root.left) || !isValidBST(root.right)) {
-        //     // System.out.println(1);
-        //     return new Rst(false, 0, 0);
-        // }
-        
         Rst left = helper(root.left);
         Rst right = helper(root.right);
         
@@ -44,11 +39,9 @@ public class Solution {
         }
         else if (root.left != null && left.maxValue >= root.val ||
             root.right != null && right.minValue <= root.val) {
-            // System.out.println("??"); 
             return new Rst(false, 0, 0);
         }
-        // System.out.println(root.val + " " + Math.max(left.maxValue, root.val) + " " + Math.min(right.minValue, root.val)); 
-        System.out.println(root.val + " " + left.maxValue + " " + right.minValue); 
+        // returen the MAX & MIN in the tree of the root
         return new Rst(true, Math.max(right.maxValue, root.val), Math.min(left.minValue, root.val));
     }
 }
