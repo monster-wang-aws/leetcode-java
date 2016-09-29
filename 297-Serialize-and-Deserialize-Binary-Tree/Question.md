@@ -30,6 +30,12 @@ Special thanks to [@Louis1992](https://leetcode.com/discuss/user/Louis1992) for 
 
 <div>
 
+<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
+
+<span class="hidebutton">[Amazon](/company/amazon/) [Bloomberg](/company/bloomberg/) [Facebook](/company/facebook/) [Google](/company/google/) [LinkedIn](/company/linkedin/) [Microsoft](/company/microsoft/) [Uber](/company/uber/) [Yahoo](/company/yahoo/)</span></div>
+
+<div>
+
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Tree](/tag/tree/) [Design](/tag/design/)</span></div>
