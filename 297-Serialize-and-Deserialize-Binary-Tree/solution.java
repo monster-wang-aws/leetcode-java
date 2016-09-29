@@ -8,30 +8,30 @@
  * }
  */
 public class Codec {
-
+     
     public String serialize(TreeNode root) {
         if (root == null) {
             return "#";
         }
-        return String.valueOf(root.val) + " " + serialize(root.left) + " " + serialize(root.right);
+        else {
+            return String.valueOf(root.val) + " " + serialize(root.left) + " " + serialize(root.right);
+        }
     }
-
-    int desPos;
-
+    
+    int pos = -1;
     public TreeNode deserialize(String data) {
-        desPos = -1;
-        return desHelper(data.split(" "));
+        return helper(data.split(" "));
     }
-
-    private TreeNode desHelper(String[] strs) {
-        desPos++;
-        if (strs[desPos].equals("#")) {
+    
+    public TreeNode helper(String[] data) {
+        pos++;
+        if (data[pos].equals("#")) {
             return null;
         }
-        TreeNode node = new TreeNode(Integer.parseInt(strs[desPos]));
-        node.left = desHelper(strs);
-        node.right = desHelper(strs);
-        return node;
+        TreeNode root = new TreeNode(Integer.parseInt(data[pos]));
+        root.left = helper(data);
+        root.right = helper(data);
+        return root;
     }
 }
 
